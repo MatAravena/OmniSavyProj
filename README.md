@@ -1,2 +1,0 @@
-# OmniSavyProj
-Test cortito !

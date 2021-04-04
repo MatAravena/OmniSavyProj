@@ -1,0 +1,21 @@
+.imageCenter {
+  padding: 2%;
+  background-color: #0725e2;
+}
+
+.title {
+  font-size: larger;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subTitle {
+  font-size: large;
+  text-align: center;
+}
+
+.text {
+  font-size: medium;
+  text-align: justify;
+  text-justify: inter-word;
+}
