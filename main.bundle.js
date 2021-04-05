@@ -295,7 +295,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img {\r\n  margin-left: 10px;\r\n  margin-top: 10px;\r\n  /* width: 10%; */\r\n}\r\n\r\n.imageLogo {\r\n  content: url();\r\n}\r\n\r\n.imageLogo {\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n", ""]);
+exports.push([module.i, ".img {\r\n  margin-left: 10px;\r\n  margin-top: 10px;\r\n  /* width: 10%; */\r\n}\r\n\r\n.imageLogo {\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n", ""]);
 
 // exports
 
