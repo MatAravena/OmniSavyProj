@@ -289,12 +289,13 @@ var FooterComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/Components/header/header.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__("../../../../css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".img {\r\n  margin-left: 10px;\r\n  margin-top: 10px;\r\n  /* width: 10%; */\r\n}\r\n", ""]);
+exports.push([module.i, ".img {\r\n  margin-left: 10px;\r\n  margin-top: 10px;\r\n  /* width: 10%; */\r\n}\r\n\r\n.imageLogo {\r\n  content: url();\r\n}\r\n\r\n.imageLogo {\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n", ""]);
 
 // exports
 
@@ -307,7 +308,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Components/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light headerPrincipal\">\n<a class=\"navbar-brand\" routerLink=\"/welcome\" tooltip=\"Home\">\n  <img src=\"../../assets/unnamed.png\" width=\"45\" height=\"45\" alt=\"\">\n</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse text-align-right\" id=\"navbarText\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/aboutUs\"  >About Us<span class=\"sr-only\"></span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/events\"  >Events</a>\n      </li>\n     </ul>\n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light headerPrincipal\">\n<a class=\"navbar-brand\" routerLink=\"/welcome\" tooltip=\"Home\">\n  <img class=\"imageLogo\" width=\"45\" height=\"45\" alt=\"\">\n</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse text-align-right\" id=\"navbarText\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/aboutUs\"  >About Us<span class=\"sr-only\"></span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/events\"  >Events</a>\n      </li>\n     </ul>\n  </div>\n</nav>\n\n\n\n<!-- \n<div id=\"menuNormal\" class=\"ui six item inverted menu blackblue margin1\">\n    <a class=\"item active\" data-tab=\"Cliente\"><i class=\"large inverted user icon\"></i><font style=\"vertical-align: inherit;\"><font style=\"vertical-align: inherit;\">Clientes</font></font></a>\n    <a class=\"item\" data-tab=\"Producto\"><i class=\"large inverted dolly icon\"></i><font style=\"vertical-align: inherit;\"><font style=\"vertical-align: inherit;\">Productos</font></font></a>\n</div>\n\n<div id=\"menuResponsivo\" class=\"ui menu\">\n    <div class=\"ui container dropdown\">\n        <a class=\"launch icon item\">\n            <i class=\"content icon\"></i>\n        </a>\n        <div class=\"item\">\n            Menu\n        </div>\n        <div class=\"ui pointing vertical menu\">\n            <a class=\"item active\" data-tab=\"Cliente\">\n                Clientes\n            </a>\n            <a class=\"item\" data-tab=\"Producto\">\n                Productos\n            </a> \n        </div>\n    </div>\n</div> -->"
 
 /***/ }),
 
