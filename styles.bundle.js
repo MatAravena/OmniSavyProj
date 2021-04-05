@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".title {\n  font-size: 2em;\n  font-weight: bold;\n  text-align: left;\n}\n\n.subTitle {\n  font-size: 1.2em;\n  text-align: left;\n}\n\n.text {\n  font-size: 1em;\n  text-align: justify;\n  text-justify: inter-word;\n}\n\n.imgLogo {\n  /* content: url(\"./assets/favicon.ico\"); */\n}\n", ""]);
+exports.push([module.i, ".title {\n  font-size: 2em;\n  font-weight: bold;\n  text-align: left;\n}\n\n.subTitle {\n  font-size: 1.2em;\n  text-align: left;\n}\n\n.text {\n  font-size: 1em;\n  text-align: justify;\n  text-justify: inter-word;\n}\n\n.imgLogo {\n  /* content: url(\"assets/favicon.ico\"); */\n}\n\n/* Hide Top Bar */\n\n@media only screen and (min-width: 1145px) {\n  #menuResponsivo.ui.menu {\n    display: none;\n  }\n}\n\n/* Hide Top Bar */\n\n@media only screen and (max-width: 700px) {\n  #menuNormal.ui.menu {\n    display: none;\n  }\n}\n", ""]);
 
 // exports
 
