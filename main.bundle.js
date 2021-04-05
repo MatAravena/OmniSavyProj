@@ -84,12 +84,13 @@ var AboutUsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/Components/events/events.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__("../../../../css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".image {\r\n  max-width: 30%;\r\n}\r\n\r\n.imageTest1 {\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n\r\n.imageTest2 {\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n\r\n.imageTest3 {\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n\r\n.butonColor {\r\n  background-color: springgreen;\r\n  border-color: black;\r\n}\r\n", ""]);
 
 // exports
 
@@ -102,7 +103,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Components/events/events.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"title\">Events</div>\n  <div class=\"subTitle\">Video Gallery</div>\n  <br>\n  <div *ngFor=\"let eve of lstVideos\">\n    <hr>\n    <div class=\"subtitle\"> {{eve.title}}</div>\n    <div class=\"subtitle\"> {{eve.date |date: 'shortDate'}}</div>\n    <div class=\"subtitle\"> {{eve.speakers}}</div>\n    <div class=\"subtitle\"> {{eve.description}}</div>\n    <button [routerLink]=\"['/video', eve.id]\">See details</button>\n  </div>\n  <hr *ngIf=\"lstVideos.length != 0\">\n</div>\n\n\nPrueba de subida"
+module.exports = "<div class=\"container\">\n  <div class=\"title\">Events</div>\n  <div class=\"subTitle\">Video Gallery</div>\n  <br>\n  <div *ngFor=\"let eve of lstVideos\">\n    <hr>\n    <div class=\"row\">\n      <div class=\"col-sm image imageTest1\"></div>\n      <div class=\"col-sm\">\n          <div class=\"subtitle\"> {{eve.title}}</div>\n          <div class=\"subtitle\"> {{eve.date |date: 'shortDate'}}</div>\n          <div class=\"subtitle\"> {{eve.speakers}}</div>\n          <div class=\"subtitle\"> {{eve.description}}</div><br>\n          <button class=\"btn btn-light butonColor\" [routerLink]=\"['/video', eve.id]\">See details</button>\n    </div>\n    </div>\n  </div>\n  <hr *ngIf=\"lstVideos.length != 0\">\n</div>"
 
 /***/ }),
 
@@ -135,9 +136,10 @@ var EventsComponent = /** @class */ (function () {
     EventsComponent.prototype.ngOnInit = function () {
         this.lstVideos.splice(0, this.lstVideos.length);
         this.lstVideos = this.video.listaVideos();
-    };
-    EventsComponent.prototype.ClickDetails = function (id) {
-        console.log(id);
+        // let shand = document.getElementsByClassName('imageTest') as HTMLCollectionOf<HTMLElement>;
+        // if (shand.length != 0) {
+        //   shand[0].style.transform = "";
+        // }
     };
     EventsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -354,12 +356,13 @@ var HeaderComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/Components/welcome/welcome.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__("../../../../css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".imageCenter {\r\n  padding: 2%;\r\n  background-color: aquamarine;\r\n}\r\n", ""]);
+exports.push([module.i, ".imageCenter {\r\n  padding: 2%;\r\n  background-color: aquamarine;\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/Lg.webp")) + ");\r\n}\r\n", ""]);
 
 // exports
 
@@ -372,7 +375,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Components/welcome/welcome.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <div style=\"text-align:center\">\n    <h1> Welcome to OmniSavy </h1>\n    <img class=\"imageCenter\" width=\"300\" alt=\"Angular Logo\" src=\"./../../../assets/Lg.webp\">\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align:center\">\n    <h1> Welcome to OmniSavy </h1>\n    <img class=\"imageCenter\" width=\"300\" alt=\"Angular Logo\">\n  </div>\n</div>"
 
 /***/ }),
 
@@ -605,6 +608,20 @@ var AppModule = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "../../../../../src/assets/ImgTest1.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "ImgTest1.e0bad63364a867fea652.jpg";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/Lg.webp":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "Lg.9c3a0692bd08716858aa.webp";
 
 /***/ }),
 

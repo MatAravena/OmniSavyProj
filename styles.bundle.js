@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".title {\n  font-size: 2em;\n  font-weight: bold;\n  text-align: left;\n}\n\n.subTitle {\n  font-size: 1.2em;\n  text-align: left;\n}\n\n.text {\n  font-size: 1em;\n  text-align: justify;\n  text-justify: inter-word;\n}\n\n/* .imgLogo {\n  content: url(\"./assets/favicon.ico\");\n} */\n\n.img-centro {\n  /* content: url(./assets/Lg.webp); */\n}\n", ""]);
+exports.push([module.i, ".title {\n  font-size: 2em;\n  font-weight: bold;\n  text-align: left;\n}\n\n.subTitle {\n  font-size: 1.2em;\n  text-align: left;\n}\n\n.text {\n  font-size: 1em;\n  text-align: justify;\n  text-justify: inter-word;\n}\n", ""]);
 
 // exports
 
