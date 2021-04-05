@@ -161,7 +161,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".image {\r\n  max-width: 30%;\r\n}\r\n\r\n.imageTest1 {\r\n  max-width: 15%;\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n\r\n.filaTexto {\r\n  margin-top: auto;\r\n  padding: auto;\r\n}\r\n", ""]);
+exports.push([module.i, ".image {\r\n  max-width: 30%;\r\n}\r\n\r\n.imageTest1 {\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  margin-left: 5%;\r\n  margin-top: 5%;\r\n  max-width: 98%;\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n\r\n.filaTexto {\r\n  margin-top: auto;\r\n  padding: auto;\r\n}\r\n", ""]);
 
 // exports
 
@@ -174,7 +174,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Components/events/video/video.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" >\n  <div *ngIf=\"this.video != null\">\n    \n    <!-- <div class=\"row\">\n      <div class=\"col-sm image imageTest1\"></div>\n    </div>\n    <div class=\"row filaTexto\">\n      <div class=\"subtitle\"> {{this.video.title}}</div><br>\n      <div class=\"subtitle\"> {{this.video.date |date: 'shortDate'}}</div><br>\n      <div class=\"subtitle\"> {{this.video.speakers}}</div><br>\n      <div class=\"subtitle\"> {{this.video.description}}</div>\n    </div> -->\n\n<div class=\"card\" style=\"width: 80%;\">\n  <div class=\"row\">\n    <div class=\"col-sm image\">\n      <img class=\"card-img-top imageTest1\" alt=\"Card image cap\">\n    </div>\n    <div class=\"col-sm\">\n      <div class=\"card-body\">\n        <h5 class=\"card-title\">{{this.video.title}}</h5>\n        <p class=\"card-text\">{{this.video.date |date: 'shortDate'}}</p>\n        <p class=\"card-text\">{{this.video.speakers}}</p>\n        <p class=\"card-text\">{{this.video.description}}</p>\n      </div>\n    </div>\n  </div>\n</div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"container\" >\n  <div *ngIf=\"this.video != null\">\n    <div class=\"card\" style=\"width: 80%;\">\n      <div class=\"row\">\n        <div class=\"col-sm image\">\n          <img class=\"card-img-top imageTest1\" alt=\"Card image cap\">\n        </div>\n        <div class=\"col-sm\">\n          <div class=\"card-body\">\n            <h5 class=\"card-title\">{{this.video.title}}</h5>\n            <p class=\"card-text\">{{this.video.date |date: 'shortDate'}}</p>\n            <p class=\"card-text\">{{this.video.speakers}}</p>\n            <p class=\"card-text\">{{this.video.description}}</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -295,7 +295,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".img {\r\n  margin-left: 10px;\r\n  margin-top: 10px;\r\n  /* width: 10%; */\r\n}\r\n\r\n.imageLogo {\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n", ""]);
+exports.push([module.i, ".imageLogo {\r\n  margin-left: 10px;\r\n  margin-top: 10px;\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/unnamed.png")) + ");\r\n}\r\n", ""]);
 
 // exports
 
@@ -308,7 +308,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Components/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light headerPrincipal\">\n<a class=\"navbar-brand\" routerLink=\"/welcome\" tooltip=\"Home\">\n  <img class=\"imageLogo\" width=\"45\" height=\"45\" alt=\"\">\n</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse text-align-right\" id=\"navbarText\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/aboutUs\"  >About Us<span class=\"sr-only\"></span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/events\"  >Events</a>\n      </li>\n     </ul>\n  </div>\n</nav>\n\n\n\n<!-- \n<div id=\"menuNormal\" class=\"ui six item inverted menu blackblue margin1\">\n    <a class=\"item active\" data-tab=\"Cliente\"><i class=\"large inverted user icon\"></i><font style=\"vertical-align: inherit;\"><font style=\"vertical-align: inherit;\">Clientes</font></font></a>\n    <a class=\"item\" data-tab=\"Producto\"><i class=\"large inverted dolly icon\"></i><font style=\"vertical-align: inherit;\"><font style=\"vertical-align: inherit;\">Productos</font></font></a>\n</div>\n\n<div id=\"menuResponsivo\" class=\"ui menu\">\n    <div class=\"ui container dropdown\">\n        <a class=\"launch icon item\">\n            <i class=\"content icon\"></i>\n        </a>\n        <div class=\"item\">\n            Menu\n        </div>\n        <div class=\"ui pointing vertical menu\">\n            <a class=\"item active\" data-tab=\"Cliente\">\n                Clientes\n            </a>\n            <a class=\"item\" data-tab=\"Producto\">\n                Productos\n            </a> \n        </div>\n    </div>\n</div> -->"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" routerLink=\"/welcome\" tooltip=\"Home\">\n    <img class=\"imageLogo\" width=\"45\" height=\"45\" alt=\"\">\n  </a>\n  <!-- Navbar brand yo -->\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTop\" aria-controls=\"navbar\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse\" id=\"navbarTop\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/aboutUs\" >About Us</a> </li>\n      <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/events\" >Events</a> </li>\n    </ul>\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -620,6 +620,13 @@ module.exports = __webpack_require__.p + "ImgTest1.e0bad63364a867fea652.jpg";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "Lg.9c3a0692bd08716858aa.webp";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/unnamed.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "unnamed.2af62ecaf49333e450a7.png";
 
 /***/ }),
 
