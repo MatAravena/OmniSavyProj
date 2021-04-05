@@ -103,7 +103,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Components/events/events.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"title\">Events</div>\n  <div class=\"subTitle\">Video Gallery</div>\n  <br>\n  <div *ngFor=\"let eve of lstVideos\">\n    <hr>\n    <div class=\"row\">\n      <div class=\"col-sm image imageTest1\"></div>\n      <div class=\"col-sm\">\n          <div class=\"subtitle\"> {{eve.title}}</div>\n          <div class=\"subtitle\"> {{eve.date |date: 'shortDate'}}</div>\n          <div class=\"subtitle\"> {{eve.speakers}}</div>\n          <div class=\"subtitle\"> {{eve.description}}</div><br>\n          <button class=\"btn btn-light butonColor\" [routerLink]=\"['/video', eve.id]\">See details</button>\n    </div>\n    </div>\n  </div>\n  <hr *ngIf=\"lstVideos.length != 0\">\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"title\">Events</div>\n  <div class=\"subTitle\">Video Gallery</div>\n  <br>\n  <div *ngFor=\"let eve of lstVideos\">\n    <hr>\n    <div class=\"row\">\n      <div class=\"col-sm image imageTest1\"></div>\n      <div class=\"col-sm\">\n          <div class=\"subtitle\"> {{eve.title}}</div>\n          <div class=\"subtitle\"> {{eve.date |date: 'shortDate'}}</div>\n          <div class=\"subtitle\"> {{eve.speakers}}</div>\n          <div class=\"subtitle\"> {{eve.description}}</div><br>\n          <button class=\"btn btn-light butonColor\" [routerLink]=\"['/video', eve.id]\">See details</button>\n      </div>\n    </div>\n  </div>\n  <hr *ngIf=\"lstVideos.length != 0\">\n\n  <!-- <div *ngFor=\"let eve of lstVideos\" class=\"card\" style=\"width: 18rem;\">\n    <div class=\"row\">\n      <div class=\"col-sm image\">\n        <img class=\"card-img-top imageTest1\"  alt=\"Card image cap\">\n      </div>\n      <div class=\"col-sm\">\n        <div class=\"card-body\">\n        <h5 class=\"card-title\">{{eve.title}}</h5>\n        <p class=\"card-text\">{{eve.date |date: 'shortDate'}}</p>\n        <p class=\"card-text\">{{eve.speakers}}</p>\n        <p class=\"card-text\">{{eve.description}}</p>\n        <button class=\"btn btn-light butonColor\" [routerLink]=\"['/video', eve.id]\">See details</button></div>\n      </div>\n    </div>\n  </div> -->\n</div>"
 
 /***/ }),
 
@@ -136,10 +136,6 @@ var EventsComponent = /** @class */ (function () {
     EventsComponent.prototype.ngOnInit = function () {
         this.lstVideos.splice(0, this.lstVideos.length);
         this.lstVideos = this.video.listaVideos();
-        // let shand = document.getElementsByClassName('imageTest') as HTMLCollectionOf<HTMLElement>;
-        // if (shand.length != 0) {
-        //   shand[0].style.transform = "";
-        // }
     };
     EventsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -159,12 +155,13 @@ var EventsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/Components/events/video/video.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__("../../../../css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".image {\r\n  max-width: 30%;\r\n}\r\n\r\n.imageTest1 {\r\n  max-width: 15%;\r\n  content: url(" + escape(__webpack_require__("../../../../../src/assets/ImgTest1.jpg")) + ");\r\n}\r\n\r\n.filaTexto {\r\n  margin-top: auto;\r\n  padding: auto;\r\n}\r\n", ""]);
 
 // exports
 
@@ -177,7 +174,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Components/events/video/video.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" >\n  <div *ngIf=\"this.video != null\">\n      <div class=\"subtitle\"> {{this.video.title}}</div>\n      <div class=\"subtitle\"> {{this.video.date |date: 'shortDate'}}</div>\n      <div class=\"subtitle\"> {{this.video.speakers}}</div>\n      <div class=\"subtitle\"> {{this.video.description}}</div>\n    </div>\n</div>"
+module.exports = "<div class=\"container\" >\n  <div *ngIf=\"this.video != null\">\n    \n    <!-- <div class=\"row\">\n      <div class=\"col-sm image imageTest1\"></div>\n    </div>\n    <div class=\"row filaTexto\">\n      <div class=\"subtitle\"> {{this.video.title}}</div><br>\n      <div class=\"subtitle\"> {{this.video.date |date: 'shortDate'}}</div><br>\n      <div class=\"subtitle\"> {{this.video.speakers}}</div><br>\n      <div class=\"subtitle\"> {{this.video.description}}</div>\n    </div> -->\n\n<div class=\"card\" style=\"width: 80%;\">\n  <div class=\"row\">\n    <div class=\"col-sm image\">\n      <img class=\"card-img-top imageTest1\" alt=\"Card image cap\">\n    </div>\n    <div class=\"col-sm\">\n      <div class=\"card-body\">\n        <h5 class=\"card-title\">{{this.video.title}}</h5>\n        <p class=\"card-text\">{{this.video.date |date: 'shortDate'}}</p>\n        <p class=\"card-text\">{{this.video.speakers}}</p>\n        <p class=\"card-text\">{{this.video.description}}</p>\n      </div>\n    </div>\n  </div>\n</div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
