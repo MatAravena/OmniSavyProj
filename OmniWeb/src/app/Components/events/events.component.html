@@ -2,12 +2,12 @@
   <div class="title">Events</div>
   <div class="title">Video Gallery</div>
   <br>
-  <div *ngFor="let eve of lstEvents.sort(id)">
-    <div class="subtitle"> {{name}}</div>
-    <div class="subtitle"> {{information}}</div>
-    <div class="subtitle"> {{location}}</div>
-    <div class="subtitle"> {{eventDate}}</div>
-    <div class="subtitle"> {{eventHour}}</div>
-    <div class="subtitle"> {{image}}</div>
-  </div>
+  <div *ngFor="let eve of lstVideos.sort(id)">
+    <hr>
+    <div class="subtitle"> {{eve.title}}</div>
+    <div class="subtitle"> {{eve.date |date: 'shortDate'}}</div>
+    <div class="subtitle"> {{eve.speakers}}</div>
+    <div class="subtitle"> {{eve.description}}</div>
+    <button (click)="ClickDetails(eve.id)">See details</button>
+  </div><hr *ngIf=lstVideos.length >
 </div>

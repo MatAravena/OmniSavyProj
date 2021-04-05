@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+.title {
+  font-size: larger;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subTitle {
+  font-size: large;
+  text-align: center;
+}
+
+.text {
+  font-size: medium;
+  text-align: justify;
+  text-justify: inter-word;
+}

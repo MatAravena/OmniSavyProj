@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -23,7 +22,7 @@ import { WelcomeComponent } from './Components/welcome/welcome.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule 
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
